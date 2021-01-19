@@ -5,8 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class ReadFile {
-    //static String filePath = "//Users//bendikbreidablikk//IdeaProjects//AdventOfCode2020//Assets//DayTwoInput.txt";
-    static String filePath = "C:\\Users\\benbre\\IdeaProjects\\AdventOfCode2020\\Assets\\DayTwoInput.txt";
+    //static String filePath = "//Users//bendikbreidablikk//IdeaProjects//AdventOfCode2020//Assets//DayThreeInput.txt";
+    static String filePath = "C:\\Users\\benbre\\IdeaProjects\\AdventOfCode2020\\Assets\\DayThreeInput.txt";
     Scanner in = new Scanner(new File(filePath));
 
     public ReadFile() throws FileNotFoundException {
