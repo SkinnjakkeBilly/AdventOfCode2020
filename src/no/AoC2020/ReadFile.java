@@ -1,4 +1,4 @@
-package no.steike;
+package no.AoC2020;
 
 import java.io.File;
 import java.io.FileNotFoundException;
