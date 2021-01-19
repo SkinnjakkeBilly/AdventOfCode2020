@@ -10,22 +10,55 @@ public class DayTwo {
     public DayTwo() throws IOException {
 
     }
-/* TODO:
-- splitt på mellomrom, kanskje?
-- les antall bokstaver som matcher bokstaven som skal sjekkes
-- sammenlign og sjekk om den er mindre enn og større enn område definert
-*/
-    public int TaskTwo() {
+
+    public int TaskOne() {
         RF.ReadList(entries);
-        int retVal = 0;
 
-        for(int i = 0; i<entries.length; i++){
-            String[] split = entries[i].split(" ");
-            for(int j = 0; j<split.length; j++){
+        int countValid = 0;
 
+        for (String entry : entries) {
+            String[] split = entry.split(" ");
+            String[] splitNum = split[0].split("-");
+            int low = Integer.parseInt(splitNum[0]);
+            int high = Integer.parseInt(splitNum[1]);
+            int count = 0;
+
+            for (int j = 0; j < split[2].length(); j++) {
+              if(split[2].charAt(j)==(split[1].charAt(0))){
+                  count++;
+              }
+            }
+            if(low<=count && count<=high){
+                countValid++;
             }
         }
 
-        return retVal;
+        return countValid;
+    }
+
+    public int TaskTwo(){
+        RF.ReadList(entries);
+
+        int countValid = 0;
+
+        for (String entry : entries) {
+            String[] split = entry.split(" ");
+            String[] splitNum = split[0].split("-");
+            int firstPlace = Integer.parseInt(splitNum[0])-1;
+            int secondPlace = Integer.parseInt(splitNum[1])-1;
+
+
+
+                if(!(split[2].charAt(firstPlace)==split[2].charAt(secondPlace)) ){
+                    if(split[2].charAt(firstPlace)==split[1].charAt(0) || split[2].charAt(secondPlace)==split[1].charAt(0)){
+                        countValid++;
+                    }
+                }
+
+
+
+        }
+
+        return countValid;
     }
 }
