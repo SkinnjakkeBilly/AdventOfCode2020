@@ -47,16 +47,11 @@ public class DayTwo {
             int firstPlace = Integer.parseInt(splitNum[0])-1;
             int secondPlace = Integer.parseInt(splitNum[1])-1;
 
-
-
-                if(!(split[2].charAt(firstPlace)==split[2].charAt(secondPlace)) ){
-                    if(split[2].charAt(firstPlace)==split[1].charAt(0) || split[2].charAt(secondPlace)==split[1].charAt(0)){
-                        countValid++;
-                    }
+            if(!(split[2].charAt(firstPlace)==split[2].charAt(secondPlace)) ){
+                if(split[2].charAt(firstPlace)==split[1].charAt(0) || split[2].charAt(secondPlace)==split[1].charAt(0)){
+                    countValid++;
                 }
-
-
-
+            }
         }
 
         return countValid;
