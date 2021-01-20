@@ -13,7 +13,24 @@ public class DayThree {
     public int TaskOne(){
         RF.ReadList(entries);
         int count = 0;
-        int index = 3;
+        int index = 0;
+
+        for(int i = 0; i<entries.length; i++){
+            if(i!=0 && entries[i]!=null){
+                entries[i] = entries[i].repeat(i);
+            }
+            if(entries[i].charAt(index)=='#'){
+                count++;
+            }
+
+            index+=3;
+        }
+        return count;
+    }
+    public int TaskTwo(){
+        RF.ReadList(entries);
+        int count = 0;
+        int index = 0;
 
         for(int i = 0; i<entries.length; i++){
             if(i!=0 && entries[i]!=null){
