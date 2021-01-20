@@ -14,7 +14,7 @@ public class Main {
         */
         DayThree DayThree = new DayThree();
         System.out.println(DayThree.TaskOne());
-        //System.out.println(DayThree.TaskTwo());
+        System.out.println(DayThree.TaskTwo());
     }
 }
 
